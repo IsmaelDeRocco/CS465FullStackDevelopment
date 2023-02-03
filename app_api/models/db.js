@@ -11,7 +11,7 @@ mongoose.connection.on('connected', () => {
   console.log('connected');
 });
 
-mongoose.connection.on('error', ernpmr => {
+mongoose.connection.on('error', err => {
   console.log('error: ' + err);
   return connect();
 });
