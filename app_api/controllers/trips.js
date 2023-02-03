@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const model = mongoose.model('trips');
 
 // GET: /trips - list all the trips
-const tripList = async (req, res) => {
+const tripsList = async (req, res) => {
     model
         .find({}) //empty filter for all 
         .exec((err, trips) => {
@@ -45,7 +45,7 @@ const tripsFindCode = async (req, res) => {
 
 
 module.exports = {
-    tripList,
+    tripsList,
     tripsFindCode
 
 };

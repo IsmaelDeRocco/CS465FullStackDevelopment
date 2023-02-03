@@ -5,7 +5,7 @@ const tripsController = require('../controllers/trips');
 
 router
     .route('/trips')
-    .get(tripsController.tripList);
+    .get(tripsController.tripsList);
 
 router
     .route('/trips/:tripCode')
