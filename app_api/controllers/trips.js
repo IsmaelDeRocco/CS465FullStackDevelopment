@@ -23,7 +23,7 @@ const tripList = async (req, res) => {
 
 };
 
-const tripsFindByCode = async (req, res) => {
+const tripsFindCode = async (req, res) => {
     model
         .find({ 'code': req.params.tripCode })
         .exec((err, trip) => {
@@ -38,7 +38,7 @@ const tripsFindByCode = async (req, res) => {
             }else{
                 return res
                 .status(200)
-                .json(trips);
+                .json(trip);
             }
         });
 };
@@ -46,6 +46,6 @@ const tripsFindByCode = async (req, res) => {
 
 module.exports = {
     tripList,
-    tripsFindByCode
+    tripsFindCode
 
 };
