@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const host = process.env.DB_HOST || '127.0.0.1'
 const dbURL = 'mongodb://${host}/travlr';
-const readLine = required('readline');
+const readLine = require('readline');
 
 const connect = () => {
   setTimeout(() => mongoose.connect(dbURL, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }), 1000);
@@ -11,7 +11,7 @@ mongoose.connection.on('connected', () => {
   console.log('connected');
 });
 
-mongoose.connection.on('error', err => {
+mongoose.connection.on('error', ernpmr => {
   console.log('error: ' + err);
   return connect();
 });
