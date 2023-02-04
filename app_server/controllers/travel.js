@@ -32,11 +32,12 @@ const renderTravelList = (req, res, responseBody) => {
 const travelList = (req, res) => {
     const path = '/api/trips';
     const requestOptions = {
-        url: `$[apiOptions.server]$[path]`, //CHECK THIS IF NOT WORK
+        url: `${apiOptions.server}${path}`, 
         method: 'GET',
         json: {},
     };
     console.info('>> travelController.travelList calling ' + requestOptions.url);
+
     request(
         requestOptions,
         (err, { statusCode }, body) => {
