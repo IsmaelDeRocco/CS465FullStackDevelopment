@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TripListingComponent } from './trip-listing/trip-listing.component';
 import { TripCardComponent } from './trip-card/trip-card.component';
-import { TripDataServices } from './services/trip-data.service';
+import { TripDataService } from './services/trip-data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { TripDataServices } from './services/trip-data.service';
     HttpModule
   ],
   providers: [
-    TripDataServices
+    TripDataService
   ],
   bootstrap: [AppComponent]
 })
