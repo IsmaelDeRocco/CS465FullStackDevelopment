@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication';
-import { User } from '../models/user';
 
 @Component({
 selector: 'app-login',
@@ -11,6 +10,7 @@ styleUrls: ['./login.component.css']
 
 export class LoginComponent implements OnInit {
   public formError: string = '';
+  
   public credentials = {
   name: '',
   email: '',

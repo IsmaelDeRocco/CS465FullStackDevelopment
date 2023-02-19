@@ -16,7 +16,6 @@ const usersRouter = require('./app_server/routes/users');
 const travelRouter = require('./app_server/routes/travel');
 const apiRouter = require('./app_api/routes/index');
 
-var app = express();
 
 var app = express();
 

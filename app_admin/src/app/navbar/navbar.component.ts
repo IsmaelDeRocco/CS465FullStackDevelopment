@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication';
 
 @Component({
@@ -9,7 +10,8 @@ import { AuthenticationService } from '../services/authentication';
 
 export class NavbarComponent implements OnInit {
   constructor(
-  private authenticationService: AuthenticationService
+  private authenticationService: AuthenticationService,
+  private router: Router
 ) { }
 
 ngOnInit() { }
@@ -20,5 +22,7 @@ public isLoggedIn(): boolean {
 
 private onLogout(): void {
   return this.authenticationService.logout();
+  this.router.navigateByUrl('#');
+  return;
 }
 }
